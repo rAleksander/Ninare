@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO & Metatags Oficiais -->
+  <title>Ninare - Sua rede de apoio da gestação ao pós parto.</title>
+  <meta name="description"
+    content="Ninare: Cuidado especializado, assistência humanizada e acolhimento com máxima segurança e dedicação. Entre em contato e conheça nossos atendimentos.">
+  <meta name="keywords" content="Ninare, cuidado especializado, assistência, acolhimento, cuidado humanizado, saúde">
+  <meta name="author" content="Ninare">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ninare | Cuidado especializado para quem mais importa">
+  <meta property="og:description"
+    content="Cuidado especializado, assistência e acolhimento com respeito, segurança e dedicação.">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Ninare">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN com extensão da paleta oficial da Ninare -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            creme: '#FCF6F2',
+            sage: '#9CA59A',
+            terracotta: '#C07764',
+            peach: '#E1B8AD',
+            navy: '#0E2B46',
+            reddish: '#C25E4D',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- ================================================================= -->
+  <!-- CSS CUSTOMIZADO NINARE (EMBUTIDO)                                 -->
+  <!-- ================================================================= -->
+  <style>
+    /* Vidro / Navegação translúcida */
+    .glass-nav {
+      background: rgba(252, 246, 242, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    /* Formas orgânicas identitárias da Ninare */
+    .rounded-organic-1 {
+      border-radius: 40px 100px 40px 100px;
+    }
+
+    .rounded-organic-2 {
+      border-radius: 80px 40px 100px 40px;
+    }
+
+    .rounded-organic-card {
+      border-radius: 28px;
+    }
+
+    /* Efeitos de flutuação para as formas de fundo */
+    .blob-shape-1 {
+      animation: floatBlob1 14s ease-in-out infinite alternate;
+    }
+
+    .blob-shape-2 {
+      animation: floatBlob2 18s ease-in-out infinite alternate-reverse;
+    }
+
+    @keyframes floatBlob1 {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      100% {
+        transform: translate(20px, -25px) scale(1.08);
+      }
+    }
+
+    @keyframes floatBlob2 {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      100% {
+        transform: translate(-25px, 20px) scale(1.05);
+      }
+    }
+
+    /* Pulsação do Botão Flutuante do WhatsApp */
+    .whatsapp-pulse {
+      box-shadow: 0 0 0 0 rgba(192, 119, 100, 0.7);
+      animation: pulse-wa 2.5s infinite;
+    }
+
+    @keyframes pulse-wa {
+      0% {
+        box-shadow: 0 0 0 0 rgba(192, 119, 100, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 16px rgba(192, 119, 100, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(192, 119, 100, 0);
+      }
+    }
+
+    /* Transição suave do Accordion do FAQ */
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .faq-button[aria-expanded="true"] .faq-chevron {
+      transform: rotate(180deg);
+    }
+
+    .faq-chevron {
+      transition: transform 0.3s ease;
+    }
+
+    /* Animação suave para o Menu Mobile */
+    @keyframes fadeInMenu {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fadeIn {
+      animation: fadeInMenu 0.25s ease-out forwards;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-creme text-navy antialiased selection:bg-peach/50 selection:text-navy min-h-screen flex flex-col relative overflow-x-hidden">
+
+  <!-- ================================================================= -->
+  <!-- HEADER / NAVEGAÇÃO FIXA                                           -->
+  <!-- ================================================================= -->
+  <header id="main-header"
+    class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 px-6 md:px-12 bg-transparent">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+
+      <!-- Marca / Logotipo -->
+      <a href="#inicio" class="flex items-center gap-2 group" aria-label="Ninare - Página Inicial">
+        <img src="ninare_logo.png" alt="Logo da Ninare" class="w-9 h-9">
+        <span class="font-serif text-2xl md:text-3xl font-bold tracking-tight text-navy">
+          Ninare
+        </span>
+      </a>
+
+      <!-- Links de Navegação Desktop -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-navy/80" aria-label="Navegação Principal">
+        <a href="#inicio" class="hover:text-terracotta transition-colors py-1">Início</a>
+        <a href="#sobre" class="hover:text-terracotta transition-colors py-1">Sobre</a>
+        <a href="#servicos" class="hover:text-terracotta transition-colors py-1">Serviços</a>
+        <a href="#como-funciona" class="hover:text-terracotta transition-colors py-1">Como funciona</a>
+        <a href="#faq" class="hover:text-terracotta transition-colors py-1">FAQ</a>
+        <a href="#contato" class="hover:text-terracotta transition-colors py-1">Contato</a>
+      </nav>
+
+      <!-- Botão CTA Header Desktop -->
+      <div class="hidden lg:flex items-center">
+        <a href="https://wa.me/556194321882?text=Ol%C3%A1%21%20Conheci%20a%20Ninare%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos."
+          target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-terracotta hover:bg-reddish text-creme font-medium text-sm px-6 py-2.5 rounded-full transition-all duration-300 shadow-sm hover:shadow hover:-translate-y-0.5">
+          <span>Solicitar atendimento</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Botão Menu Mobile (Hamburger) -->
+      <div class="lg:hidden flex items-center">
+        <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu"
+          aria-label="Alternar menu de navegação" class="p-2 rounded-xl text-navy hover:bg-peach/30 transition-colors">
+          <!-- Ícone Abrir -->
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- Ícone Fechar -->
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Gaveta Menu Mobile -->
+    <div id="mobile-menu"
+      class="hidden lg:hidden mt-3 p-6 glass-nav rounded-2xl border border-sage/20 shadow-lg animate-fadeIn">
+      <nav class="flex flex-col gap-4 text-base font-medium text-navy">
+        <a href="#inicio" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-peach/20 transition-colors">Início</a>
+        <a href="#sobre" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-peach/20 transition-colors">Sobre</a>
+        <a href="#servicos"
+          class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-peach/20 transition-colors">Serviços</a>
+        <a href="#como-funciona" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-peach/20 transition-colors">Como
+          funciona</a>
+        <a href="#faq" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-peach/20 transition-colors">FAQ</a>
+        <a href="#contato" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-peach/20 transition-colors">Contato</a>
+        <div class="pt-3 border-t border-sage/20">
+          <a href="https://wa.me/556194321882?text=Ol%C3%A1%21%20Conheci%20a%20Ninare%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos."
+            target="_blank" rel="noopener noreferrer"
+            class="w-full flex items-center justify-center gap-2 bg-terracotta hover:bg-reddish text-creme font-medium py-3 rounded-full transition-colors shadow-sm">
+            <span>Solicitar atendimento</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <!-- ================================================================= -->
+    <!-- 1. HERO SECTION                                                   -->
+    <!-- ================================================================= -->
+    <section id="inicio" class="relative pt-32 md:pt-44 pb-20 md:pb-32 px-6 md:px-12 overflow-hidden">
+      <!-- Formas Orgânicas de Fundo -->
+      <div
+        class="absolute top-12 right-0 -mr-24 w-96 h-96 bg-peach/30 rounded-full blur-3xl pointer-events-none -z-10 blob-shape-1">
+      </div>
+      <div
+        class="absolute bottom-0 left-10 w-80 h-80 bg-sage/20 rounded-full blur-2xl pointer-events-none -z-10 blob-shape-2">
+      </div>
+
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+
+        <!-- Conteúdo Textual do Hero -->
+        <div class="lg:col-span-7 flex flex-col items-start space-y-6">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-peach/40 border border-terracotta/20 text-reddish text-xs md:text-sm font-semibold tracking-wider uppercase">
+            <span>CUIDADO • ASSISTÊNCIA • ACOLHIMENTO</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-navy font-bold leading-[1.15] tracking-tight">
+            Ninare <span class="text-reddish italic font-normal"><br>Sua rede de apoio da gestação ao pós-parto.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg md:text-xl text-navy/75 max-w-2xl font-light leading-relaxed">
+            A Ninare nasceu com o propósito de oferecer cuidados especializados, humanizados e acolhedores, respeitando
+            as necessidades de cada família. Oferecemos suporte com atenção, sensibilidade e segurança, para que mães,
+            bebês e famílias se sintam cuidados e amparados em cada etapa dessa jornada.
+          </p>
+
+          <!-- CTAs do Hero -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4 w-full sm:w-auto">
+            <a href="https://wa.me/556194321882?text=Ol%C3%A1%21%20Conheci%20a%20Ninare%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos."
+              target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2 bg-terracotta hover:bg-reddish text-creme font-medium text-base px-8 py-4 rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5">
+              <span>Solicitar atendimento</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+
+            <a href="#sobre"
+              class="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-sage/15 text-navy font-medium text-base px-8 py-4 rounded-full border border-sage/40 transition-colors">
+              <span>Conheça a Ninare</span>
+              <svg class="w-5 h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Pílulas de Confiança Suaves -->
+          <div class="pt-6 grid grid-cols-3 gap-6 border-t border-sage/20 w-full max-w-lg">
+            <div>
+              <p class="text-xs text-center uppercase font-medium text-sage">Acolhimento</p>
+              <p class="text-sm text-center font-semibold text-navy mt-0.5">para <br>toda familia</p>
+            </div>
+            <div>
+              <p class="text-xs text-center uppercase font-medium text-sage">Cuidado</p>
+              <p class="text-sm text-center font-semibold text-navy mt-0.5">com quem mais importa</p>
+            </div>
+            <div>
+              <p class="text-xs text-center uppercase font-medium text-sage">Confiança</p>
+              <p class="text-sm text-center font-semibold text-navy mt-0.5">na hora que você mais precisa</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Composição Visual Orgânica / Editorial Hero -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-md">
+
+            <!-- Moldura externa com imagem -->
+            <div
+              class="w-full aspect-[4/5] bg-gradient-to-br from-peach/40 via-sage/20 to-terracotta/20 rounded-organic-1 p-4 shadow-xl border border-white/60 relative overflow-hidden backdrop-blur-sm">
+
+              <img src="ninare_art.png" alt="Cuidado materno-infantil e apoio às famílias"
+                class="absolute inset-0 w-full h-full object-cover" />
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Detalhes decorativos de apoio -->
+        <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-peach/50 rounded-full blur-xl -z-10"></div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 2. SOBRE A NINARE                                                 -->
+    <!-- ================================================================= -->
+    <section id="sobre" class="py-20 md:py-28 px-6 md:px-12 bg-white/40 border-y border-sage/15 relative">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+        <!-- Espaço Visual / Imagem Institucional Asimétrica -->
+        <div class="lg:col-span-5 order-2 lg:order-1">
+          <div class="relative">
+            <!-- Moldura para imagem ou composição visual da Ninare -->
+            <div
+              class="w-full aspect-[4/5] bg-gradient-to-tr from-sage/20 via-peach/30 to-creme rounded-organic-2 border border-terracotta/20 shadow-lg p-6 flex flex-col justify-between overflow-hidden relative">
+              <div class="space-y-1 text-center">
+                <span class="text-xs uppercase tracking-widest text-sage font-bold">Ninare Institucional</span>
+                <h4 class="font-serif text-xl font-bold text-navy">Larissa França</h4>
+              </div>
+
+              <!-- Foto Larissa com Fallback inteligente caso a imagem esteja em pasta local ou raiz -->
+              <div
+                class="my-auto w-full h-full min-h-[260px] rounded-2xl overflow-hidden shadow-sm bg-stone-100 flex items-center justify-center">
+                <img src="lari_art.png" alt="Fotografia institucional Larissa"
+                  class="w-full h-full object-cover object-center block"
+                  onerror="this.onerror=null; this.src='images/larissa.jpeg';">
+              </div>
+
+              <div class="text-xs text-navy/60 italic border-t border-sage/20 pt-3 mt-4 text-center">
+                "Acolher com respeito e responsabilidade é a nossa prioridade."
+              </div>
+
+            </div>
+            <!-- Ornamento orgânico -->
+            <div class="absolute -top-4 -right-4 w-20 h-20 bg-terracotta/10 rounded-full blur-lg -z-10"></div>
+          </div>
+        </div>
+
+        <!-- Conteúdo Institucional -->
+        <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
+          <div
+            class="inline-flex items-center gap-2 text-terracotta font-semibold text-xs md:text-sm tracking-wider uppercase">
+            <span class="w-6 h-px bg-terracotta"></span>
+            <span>Sobre nós</span>
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-navy leading-tight">
+            Por trás da Ninare,
+          </h2>
+
+          <div class="space-y-4 text-navy/80 text-base md:text-lg font-light leading-relaxed">
+            <p>
+              Prazer, sou a Larissa França!
+              <br><br>
+              Sou técnica de enfermagem, com especialização em Neonatologia e Pediatria, doula, educadora perinatal e
+              consultora de amamentação, com atuação também em cuidados especializados com recém-nascidos.
+              <br><br>
+              Sou esposa e mãe de um menino de 5 anos, e a maternidade faz parte da minha maneira de compreender os
+              desafios, as dúvidas e as transformações que acompanham a chegada de um filho.
+              <br><br>
+              Minha dedicação ao cuidado materno-infantil vem da vontade de unir conhecimento técnico, acolhimento e
+              orientação segura, respeitando a história e as necessidades de cada família. Acredito que nenhuma mãe
+              precisa atravessar essa fase sozinha e que ter apoio, informação e alguém em quem confiar pode fazer toda
+              a diferença.
+              <br><br>
+              É assim que procuro exercer meu trabalho: com responsabilidade, empatia e respeito, oferecendo um cuidado
+              próximo e individualizado em cada etapa dessa jornada.
+            </p>
+          </div>
+
+          <!-- Pilares Institucionais -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+            <div class="p-4 rounded-xl bg-creme border border-sage/20">
+              <h4 class="font-semibold text-navy text-sm flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-reddish"></span>
+                Cuidado com Propósito
+              </h4>
+              <p class="text-xs text-navy/70 mt-1">Atenção, empatia e respeito às necessidades de cada família.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-creme border border-sage/20">
+              <h4 class="font-semibold text-navy text-sm flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-sage"></span>
+                Relações de Confiança
+              </h4>
+              <p class="text-xs text-navy/70 mt-1">Diálogo transparente e compromisso com um atendimento responsável e
+                acolhedor.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 3. SERVIÇOS                                                       -->
+    <!-- ================================================================= -->
+    <section id="servicos" class="py-20 md:py-28 px-6 md:px-12 relative">
+      <div class="max-w-7xl mx-auto space-y-16">
+
+        <!-- Cabeçalho da Seção -->
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+          <div
+            class="inline-flex items-center gap-2 text-terracotta font-semibold text-xs md:text-sm tracking-wider uppercase">
+            <span>Nossas Soluções</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-navy">
+            Encontre o cuidado que você precisa
+          </h2>
+          <p class="text-navy/75 text-base md:text-lg font-light">
+            Conheça as modalidades de apoio preparadas para atender às necessidades de assistência e suporte da sua
+            família com excelência.
+          </p>
+        </div>
+
+        <!-- Grade de Cards de Serviços -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- SERVIÇO 1 -->
+          <div
+            class="bg-white rounded-organic-card p-6 border border-sage/20 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+            <div class="space-y-4">
+              <div
+                class="w-12 h-12 rounded-2xl bg-peach/40 text-terracotta flex items-center justify-center group-hover:scale-110 transition-transform">
+
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" />
+                </svg>
+
+              </div>
+              <span class="text-[11px] font-bold text-sage uppercase tracking-wider">Acompanhamento</span>
+              <h3 class="font-serif text-xl font-bold text-navy">Doula e Educadora Perinatal</h3>
+              <p class="text-sm text-navy/70 leading-relaxed">
+                Apoio especializado durante a gestação, parto e pós-parto, com presença acolhedora, informações
+                confiáveis e suporte emocional para você e sua família.
+              </p>
+            </div>
+            <div class="pt-6 mt-4 border-t border-sage/10">
+              <a href="https://wa.me/556194321882?text=Ol%C3%A1%21%20Conheci%20a%20Ninare%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o%20Servi%C3%A7o%201."
+                target="_blank" rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 bg-peach/30 hover:bg-terracotta text-navy hover:text-creme font-medium text-xs py-2.5 px-4 rounded-full transition-colors">
+                <span>Saber mais via WhatsApp</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- SERVIÇO 2 -->
+          <div
+            class="bg-white rounded-organic-card p-6 border border-sage/20 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+            <div class="space-y-4">
+              <div
+                class="w-12 h-12 rounded-2xl bg-sage/30 text-navy flex items-center justify-center group-hover:scale-110 transition-transform">
+
+
+
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <!-- Bico da chupeta -->
+                  <path d="M9 4.5a3 3 0 0 1 6 0c0 2-1 3.2-1.8 4.5h-2.4C10 7.7 9 6.5 9 4.5Z" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="1.75" />
+
+                  <!-- Escudo -->
+                  <path d="M7 9h10a2 2 0 0 1 2 2v2a7 7 0 0 1-14 0v-2a2 2 0 0 1 2-2Z" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="1.75" />
+
+                  <!-- Argola -->
+                  <path d="M10 20v1a2 2 0 0 0 4 0v-1" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="1.75" />
+                </svg>
+
+
+
+              </div>
+              <span class="text-[11px] font-bold text-sage uppercase tracking-wider">Acompanhamento</span>
+              <h3 class="font-serif text-xl font-bold text-navy">Cuidados infantis</h3>
+              <p class="text-sm text-navy/70 leading-relaxed">
+                Suporte para o dia a dia com o bebê, incluindo cuidados com o sono, alimentação, higiene, bem-estar e
+                estímulo para o desenvolvimento nos primeiros meses de vida.
+              </p>
+            </div>
+            <div class="pt-6 mt-4 border-t border-sage/10">
+              <a href="https://wa.me/556194321882?text=Ol%C3%A1%21%20Conheci%20a%20Ninare%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o%20Servi%C3%A7o%202."
+                target="_blank" rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 bg-peach/30 hover:bg-terracotta text-navy hover:text-creme font-medium text-xs py-2.5 px-4 rounded-full transition-colors">
+                <span>Saber mais via WhatsApp</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- SERVIÇO 3 -->
+          <div
+            class="bg-white rounded-organic-card p-6 border border-sage/20 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+            <div class="space-y-4">
+              <div
+                class="w-12 h-12 rounded-2xl bg-terracotta/20 text-reddish flex items-center justify-center group-hover:scale-110 transition-transform">
+
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="5" r="2.5" stroke-width="1.75" />
+                  <path d="M8 21v-3.5a4 4 0 0 1 4-4h1.5a3.5 3.5 0 0 0 3.5-3.5V9" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="1.75" />
+                  <path d="M8 11.5a3 3 0 0 0 3 3h1l2 2.5M5 21h10" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="1.75" />
+                </svg>
+
+              </div>
+              <span class="text-[11px] font-bold text-sage uppercase tracking-wider">Acompanhamento</span>
+              <h3 class="font-serif text-xl font-bold text-navy">Auxilio na amamentação</h3>
+              <p class="text-sm text-navy/70 leading-relaxed">
+                Suporte profissional e acolhedor para auxiliar nas primeiras semanas de amamentação, ajudando você a
+                encontrar conforto, segurança e confiança nesse momento tão especial.
+              </p>
+            </div>
+            <div class="pt-6 mt-4 border-t border-sage/10">
+              <a href="https://wa.me/556194321882?text=Ol%C3%A1%21%20Conheci%20a%20Ninare%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o%20Servi%C3%A7o%203."
+                target="_blank" rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 bg-peach/30 hover:bg-terracotta text-navy hover:text-creme font-medium text-xs py-2.5 px-4 rounded-full transition-colors">
+                <span>Saber mais via WhatsApp</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- SERVIÇO 4 -->
+          <div
+            class="bg-white rounded-organic-card p-6 border border-sage/20 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+            <div class="space-y-4">
+              <div
+                class="w-12 h-12 rounded-2xl bg-peach/50 text-navy flex items-center justify-center group-hover:scale-110 transition-transform">
+
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 7v14m0-14C10.5 5.5 8.5 5 5 5H3v13h3c2.5 0 4.5.5 6 3m0-14c1.5-1.5 3.5-2 7-2h2v13h-3c-2.5 0-4.5.5-6 3"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" />
+                </svg>
+
+              </div>
+              <span class="text-[11px] font-bold text-sage uppercase tracking-wider">curso</span>
+              <h3 class="font-serif text-xl font-bold text-navy">Cursos oferecidos</h3>
+              <p class="text-sm text-navy/70 leading-relaxed">
+                Primeiros cuidados com RN.
+                <br>Primeiros socorros 0 a 1 ano.
+                <br>Amamentação.
+              </p>
+            </div>
+            <div class="pt-6 mt-4 border-t border-sage/10">
+              <a href="https://wa.me/556194321882?text=Ol%C3%A1%21%20Conheci%20a%20Ninare%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o%20Servi%C3%A7o%204."
+                target="_blank" rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 bg-peach/30 hover:bg-terracotta text-navy hover:text-creme font-medium text-xs py-2.5 px-4 rounded-full transition-colors">
+                <span>Saber mais via WhatsApp</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 4. DIFERENCIAIS                                                   -->
+    <!-- ================================================================= -->
+    <section id="diferenciais" class="py-20 md:py-28 px-6 md:px-12 bg-white/50 border-y border-sage/15">
+      <div class="max-w-7xl mx-auto space-y-16">
+
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+          <div
+            class="inline-flex items-center gap-2 text-terracotta font-semibold text-xs md:text-sm tracking-wider uppercase">
+            <span>Nossos Pilares</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-navy">
+            Por que escolher a Ninare?
+          </h2>
+          <p class="text-navy/75 text-base md:text-lg font-light">
+            Construímos uma metodologia de cuidado pensada para valorizar cada detalhe da rotina e proporcionar paz de
+            espírito a quem amamos.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <!-- Bloco 1 -->
+          <div
+            class="p-6 rounded-2xl bg-creme/60 border border-sage/20 hover:border-terracotta/40 transition-colors space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-terracotta text-creme flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-navy">Profissionais preparadas</h3>
+            <p class="text-sm text-navy/70 leading-relaxed">
+              Equipe orientada com rigor técnico, postura acolhedora e capacidade de escuta em todas as etapas do
+              atendimento.
+            </p>
+          </div>
+
+          <!-- Bloco 2 -->
+          <div
+            class="p-6 rounded-2xl bg-creme/60 border border-sage/20 hover:border-terracotta/40 transition-colors space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-sage text-creme flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-navy">Atendimento personalizado</h3>
+            <p class="text-sm text-navy/70 leading-relaxed">
+              Plano de assistência planejado individualmente, respeitando preferências, hábitos familiares e horários.
+            </p>
+          </div>
+
+          <!-- Bloco 3 -->
+          <div
+            class="p-6 rounded-2xl bg-creme/60 border border-sage/20 hover:border-terracotta/40 transition-colors space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-navy text-creme flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-navy">Segurança e confiança</h3>
+            <p class="text-sm text-navy/70 leading-relaxed">
+              Supervisão contínua, compromisso com a pontualidade e integridade em cada interação com a família.
+            </p>
+          </div>
+
+          <!-- Bloco 4 -->
+          <div
+            class="p-6 rounded-2xl bg-creme/60 border border-sage/20 hover:border-terracotta/40 transition-colors space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-reddish text-creme flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-navy">Cuidado humanizado</h3>
+            <p class="text-sm text-navy/70 leading-relaxed">
+              Tratamento pautado no afeto, na empatia genuína e na consideração calorosa em todos os momentos.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 5. COMO FUNCIONA                                                  -->
+    <!-- ================================================================= -->
+    <section id="como-funciona" class="py-20 md:py-28 px-6 md:px-12 relative">
+      <div class="max-w-7xl mx-auto space-y-16">
+
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+          <div
+            class="inline-flex items-center gap-2 text-terracotta font-semibold text-xs md:text-sm tracking-wider uppercase">
+            <span>Passo a Passo</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-navy">
+            Cuidar pode ser mais simples
+          </h2>
+          <p class="text-navy/75 text-base md:text-lg font-light">
+            Um fluxo transparente e descomplicado para você iniciar o atendimento adequado com tranquilidade.
+          </p>
+        </div>
+
+        <!-- Grade das 4 etapas -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+
+          <!-- Etapa 1 -->
+          <div
+            class="bg-white/80 rounded-2xl p-6 border border-sage/20 relative shadow-sm hover:shadow-md transition-shadow">
+            <div
+              class="w-10 h-10 rounded-full bg-peach/40 text-terracotta font-serif font-bold text-base flex items-center justify-center mb-4">
+              01
+            </div>
+            <h3 class="font-serif text-lg font-bold text-navy mb-2">Entre em contato</h3>
+            <p class="text-xs text-navy/70 leading-relaxed">
+              Envie uma mensagem pelo WhatsApp ou preencha o formulário em nosso site para iniciarmos a conversa.
+            </p>
+          </div>
+
+          <!-- Etapa 2 -->
+          <div
+            class="bg-white/80 rounded-2xl p-6 border border-sage/20 relative shadow-sm hover:shadow-md transition-shadow">
+            <div
+              class="w-10 h-10 rounded-full bg-peach/40 text-terracotta font-serif font-bold text-base flex items-center justify-center mb-4">
+              02
+            </div>
+            <h3 class="font-serif text-lg font-bold text-navy mb-2">Conte o que você precisa</h3>
+            <p class="text-xs text-navy/70 leading-relaxed">
+              Compartilhe a rotina, os horários e os detalhes específicos necessários para o cuidado adequado.
+            </p>
+          </div>
+
+          <!-- Etapa 3 -->
+          <div
+            class="bg-white/80 rounded-2xl p-6 border border-sage/20 relative shadow-sm hover:shadow-md transition-shadow">
+            <div
+              class="w-10 h-10 rounded-full bg-peach/40 text-terracotta font-serif font-bold text-base flex items-center justify-center mb-4">
+              03
+            </div>
+            <h3 class="font-serif text-lg font-bold text-navy mb-2">Encontre o cuidado adequado</h3>
+            <p class="text-xs text-navy/70 leading-relaxed">
+              Apresentamos o direcionamento e a assistência ideal sob medida para a realidade da sua família.
+            </p>
+          </div>
+
+          <!-- Etapa 4 -->
+          <div
+            class="bg-white/80 rounded-2xl p-6 border border-sage/20 relative shadow-sm hover:shadow-md transition-shadow">
+            <div
+              class="w-10 h-10 rounded-full bg-peach/40 text-terracotta font-serif font-bold text-base flex items-center justify-center mb-4">
+              04
+            </div>
+            <h3 class="font-serif text-lg font-bold text-navy mb-2">Comece seu atendimento</h3>
+            <p class="text-xs text-navy/70 leading-relaxed">
+              Inicie o acompanhamento com acompanhamento próximo, segurança e total suporte da Ninare.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 6. DEPOIMENTOS                                                    -->
+    <!-- ================================================================= -->
+    <section id="depoimentos" class="py-20 md:py-28 px-6 md:px-12 bg-white/40 border-y border-sage/15 relative">
+      <div class="max-w-7xl mx-auto space-y-14">
+
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+          <div
+            class="inline-flex items-center gap-2 text-terracotta font-semibold text-xs md:text-sm tracking-wider uppercase">
+            <span>Depoimentos & Confiança</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-navy">
+            Quem conhece, confia
+          </h2>
+          <p class="text-navy/75 text-base md:text-lg font-light">
+            O reconhecimento de quem experimenta nosso compromisso com o cuidado diário e o afeto.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <!-- Card Depoimento 1 -->
+          <div class="bg-creme rounded-2xl p-8 border border-sage/20 shadow-sm flex flex-col justify-between space-y-6">
+            <div class="space-y-3">
+              <div class="flex text-terracotta gap-1">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <p class="text-sm text-navy/75 italic leading-relaxed">
+                "A Ninare nos trouxe tranquilidade no momento em que mais precisávamos. O cuidado, a pontualidade e o
+                carinho com minha mãe foram impecáveis."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-sage/15">
+              <div
+                class="w-10 h-10 rounded-full bg-peach/40 flex items-center justify-center font-serif text-navy font-semibold text-sm">
+                C1
+              </div>
+              <div>
+                <p class="text-sm font-semibold text-navy">Família Ribeiro</p>
+                <p class="text-xs text-navy/50">Brasília - DF</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Depoimento 2 -->
+          <div class="bg-creme rounded-2xl p-8 border border-sage/20 shadow-sm flex flex-col justify-between space-y-6">
+            <div class="space-y-3">
+              <div class="flex text-terracotta gap-1">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <p class="text-sm text-navy/75 italic leading-relaxed">
+                "Profissionais preparadas e muito atenciosas. A assistência humanizada da Ninare fez toda a diferença na
+                harmonia da nossa rotina."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-sage/15">
+              <div
+                class="w-10 h-10 rounded-full bg-sage/30 flex items-center justify-center font-serif text-navy font-semibold text-sm">
+                C2
+              </div>
+              <div>
+                <p class="text-sm font-semibold text-navy">Mariana Fonseca</p>
+                <p class="text-xs text-navy/50">Família assistida</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Depoimento 3 -->
+          <div class="bg-creme rounded-2xl p-8 border border-sage/20 shadow-sm flex flex-col justify-between space-y-6">
+            <div class="space-y-3">
+              <div class="flex text-terracotta gap-1">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <p class="text-sm text-navy/75 italic leading-relaxed">
+                "Superaram todas as nossas expectativas. Transparência, carinho genuíno e muita competência técnica em
+                cada visita."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-sage/15">
+              <div
+                class="w-10 h-10 rounded-full bg-terracotta/20 flex items-center justify-center font-serif text-navy font-semibold text-sm">
+                C3
+              </div>
+              <div>
+                <p class="text-sm font-semibold text-navy">Carlos Eduardo</p>
+                <p class="text-xs text-navy/50">Família assistida</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 7. CTA PRINCIPAL                                                  -->
+    <!-- ================================================================= -->
+    <section class="py-20 md:py-24 px-6 md:px-12 relative overflow-hidden">
+      <div
+        class="max-w-5xl mx-auto bg-gradient-to-br from-terracotta via-reddish to-terracotta text-creme rounded-3xl p-10 md:p-16 shadow-xl relative overflow-hidden text-center space-y-6">
+        <!-- Detalhes de iluminação sutil -->
+        <div class="absolute -top-16 -right-16 w-64 h-64 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
+        <div class="absolute -bottom-16 -left-16 w-64 h-64 bg-black/10 rounded-full blur-2xl pointer-events-none"></div>
+
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
+          Precisa de cuidado e assistência?
+        </h2>
+
+        <p class="text-creme/90 text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+          Nossa equipe está à disposição para ouvir suas necessidades e apresentar a melhor forma de cuidado para quem
+          você ama. Fale conosco agora mesmo.
+        </p>
+
+        <div class="pt-4 flex justify-center">
+          <a href="https://wa.me/556194321882?text=Ol%C3%A1%21%20Conheci%20a%20Ninare%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos."
+            target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 bg-creme hover:bg-white text-terracotta font-semibold text-base px-9 py-4 rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5">
+            <span>Falar com a Ninare</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 8. FAQ (ACCORDION JS EMBUTIDO)                                    -->
+    <!-- ================================================================= -->
+    <section id="faq" class="py-20 md:py-28 px-6 md:px-12 bg-white/40 border-y border-sage/15">
+      <div class="max-w-4xl mx-auto space-y-14">
+
+        <div class="text-center space-y-4">
+          <div
+            class="inline-flex items-center gap-2 text-terracotta font-semibold text-xs md:text-sm tracking-wider uppercase">
+            <span>Dúvidas Frequentes</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-navy">
+            Perguntas frequentes
+          </h2>
+          <p class="text-navy/75 text-base md:text-lg font-light">
+            Esclareça as principais dúvidas sobre os atendimentos e serviços da Ninare.
+          </p>
+        </div>
+
+        <!-- Container do Accordion -->
+        <div class="space-y-4">
+
+          <!-- Pergunta 1 -->
+          <div class="faq-item bg-creme border border-sage/20 rounded-2xl overflow-hidden transition-colors">
+            <button type="button"
+              class="faq-button w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-serif font-bold text-base md:text-lg text-navy hover:text-terracotta transition-colors"
+              aria-expanded="false">
+              <span>Como solicitar um atendimento?</span>
+              <span
+                class="faq-chevron flex-shrink-0 w-6 h-6 rounded-full bg-peach/30 flex items-center justify-center text-terracotta">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner px-6 pb-6 text-sm md:text-base text-navy/80 font-light leading-relaxed">
+                Você pode solicitar atendimento facilmente entrando em contato diretamente pelo nosso WhatsApp (+55 61
+                9432-1882) ou preenchendo o formulário de contato abaixo. Nossa equipe responderá prontamente para
+                orientar sobre os próximos passos.
+              </div>
+            </div>
+          </div>
+
+          <!-- Pergunta 2 -->
+          <div class="faq-item bg-creme border border-sage/20 rounded-2xl overflow-hidden transition-colors">
+            <button type="button"
+              class="faq-button w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-serif font-bold text-base md:text-lg text-navy hover:text-terracotta transition-colors"
+              aria-expanded="false">
+              <span>Quais serviços a Ninare oferece?</span>
+              <span
+                class="faq-chevron flex-shrink-0 w-6 h-6 rounded-full bg-peach/30 flex items-center justify-center text-terracotta">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner px-6 pb-6 text-sm md:text-base text-navy/80 font-light leading-relaxed">
+                A Ninare oferece soluções em cuidados especializados e assistência personalizada para atender às
+                necessidades específicas da sua família. Para detalhes sobre modalidades e opções disponíveis, consulte
+                nossa seção de serviços ou fale conosco pelo WhatsApp.
+              </div>
+            </div>
+          </div>
+
+          <!-- Pergunta 3 -->
+          <div class="faq-item bg-creme border border-sage/20 rounded-2xl overflow-hidden transition-colors">
+            <button type="button"
+              class="faq-button w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-serif font-bold text-base md:text-lg text-navy hover:text-terracotta transition-colors"
+              aria-expanded="false">
+              <span>Como funciona o atendimento?</span>
+              <span
+                class="faq-chevron flex-shrink-0 w-6 h-6 rounded-full bg-peach/30 flex items-center justify-center text-terracotta">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner px-6 pb-6 text-sm md:text-base text-navy/80 font-light leading-relaxed">
+                Nosso atendimento inicia com uma escuta atenta das necessidades da pessoa a ser assistida e de sua
+                família. Em seguida, alinhamos a escala, a modalidade de cuidado e as diretrizes necessárias para
+                assegurar tranquilidade e acolhimento contínuo.
+              </div>
+            </div>
+          </div>
+
+          <!-- Pergunta 4 -->
+          <div class="faq-item bg-creme border border-sage/20 rounded-2xl overflow-hidden transition-colors">
+            <button type="button"
+              class="faq-button w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-serif font-bold text-base md:text-lg text-navy hover:text-terracotta transition-colors"
+              aria-expanded="false">
+              <span>É possível escolher o profissional?</span>
+              <span
+                class="faq-chevron flex-shrink-0 w-6 h-6 rounded-full bg-peach/30 flex items-center justify-center text-terracotta">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner px-6 pb-6 text-sm md:text-base text-navy/80 font-light leading-relaxed">
+                Buscamos sempre alinhar o perfil mais adequado às características e necessidades de quem receberá o
+                cuidado, priorizando a afinidade, o conforto e a empatia na convivência diária.
+              </div>
+            </div>
+          </div>
+
+          <!-- Pergunta 5 -->
+          <div class="faq-item bg-creme border border-sage/20 rounded-2xl overflow-hidden transition-colors">
+            <button type="button"
+              class="faq-button w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-serif font-bold text-base md:text-lg text-navy hover:text-terracotta transition-colors"
+              aria-expanded="false">
+              <span>Em quais regiões a Ninare atende?</span>
+              <span
+                class="faq-chevron flex-shrink-0 w-6 h-6 rounded-full bg-peach/30 flex items-center justify-center text-terracotta">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner px-6 pb-6 text-sm md:text-base text-navy/80 font-light leading-relaxed">
+                Atendemos de forma dedicada com abrangência sob consulta. Entre em contato conosco pelo WhatsApp para
+                confirmarmos a disponibilidade na sua localidade específica.
+              </div>
+            </div>
+          </div>
+
+          <!-- Pergunta 6 -->
+          <div class="faq-item bg-creme border border-sage/20 rounded-2xl overflow-hidden transition-colors">
+            <button type="button"
+              class="faq-button w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-serif font-bold text-base md:text-lg text-navy hover:text-terracotta transition-colors"
+              aria-expanded="false">
+              <span>Posso solicitar atendimento para outra pessoa?</span>
+              <span
+                class="faq-chevron flex-shrink-0 w-6 h-6 rounded-full bg-peach/30 flex items-center justify-center text-terracotta">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner px-6 pb-6 text-sm md:text-base text-navy/80 font-light leading-relaxed">
+                Sim. A grande maioria das solicitações é realizada por familiares, responsáveis ou pessoas próximas que
+                buscam suporte e amparo de confiança para quem mais amam.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 9. CONTATO & FORMULÁRIO (SEM BACKEND - DIRETO NO WHATSAPP)        -->
+    <!-- ================================================================= -->
+
+    <!-- ================================================================= -->
+    <!-- 9. CONTATO & FORMULÁRIO (SEM BACKEND - DIRETO NO WHATSAPP)         -->
+    <!-- ================================================================= -->
+    <section id="contato" class="py-20 md:py-28 px-6 md:px-12 relative">
+      <div class="max-w-7xl mx-auto space-y-16">
+
+        <!-- Cabeçalho -->
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+          <div
+            class="inline-flex items-center gap-2 text-terracotta font-semibold text-xs md:text-sm tracking-wider uppercase">
+            <span>Canais Oficiais</span>
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-navy">
+            Estamos prontos para ouvir você
+          </h2>
+          <p class="text-sm text-navy/70 leading-relaxed font-light max-w-2xl mx-auto">
+            Fique à vontade para nos chamar em qualquer um dos meios oficiais de atendimento da Ninare:
+          </p>
+        </div>
+
+        <!-- Grid dos três cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+
+          <!-- Card WhatsApp -->
+          <div class="p-6 bg-white rounded-2xl border border-sage/20 shadow-sm space-y-4 w-full flex flex-col">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-full bg-peach/40 flex items-center justify-center text-terracotta flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+
+              <div>
+                <h4 class="text-sm font-bold text-navy">WhatsApp</h4>
+                <p class="text-sm text-navy/80">+55 61 9432-1882</p>
+              </div>
+            </div>
+
+            <a href="https://wa.me/556194321882?text=Ol%C3%A1%21%20Conheci%20a%20Ninare%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos"
+              target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-xs font-semibold text-terracotta hover:text-reddish pt-1 transition-colors mt-auto">
+              <span>Falar pelo WhatsApp</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Card Instagram -->
+          <div class="p-6 bg-white rounded-2xl border border-sage/20 shadow-sm space-y-4 w-full flex flex-col">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-sage/30 flex items-center justify-center text-navy flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke-width="2"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke-width="2"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2"></line>
+                </svg>
+              </div>
+
+              <div>
+                <h4 class="text-sm font-bold text-navy">Instagram</h4>
+                <p class="text-sm text-navy/80">@ninareoficial</p>
+              </div>
+            </div>
+
+            <a href="https://www.instagram.com/ninareoficial/" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-xs font-semibold text-terracotta hover:text-reddish pt-1 transition-colors mt-auto">
+              <span>Conhecer nosso Instagram</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Card E-mail -->
+          <div class="p-6 bg-white rounded-2xl border border-sage/20 shadow-sm space-y-4 w-full flex flex-col">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-peach/50 flex items-center justify-center text-navy flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+
+              <div class="min-w-0">
+                <h4 class="text-sm font-bold text-navy">E-mail</h4>
+                <p class="text-sm text-navy/80 break-words">oficialninare@gmail.com</p>
+              </div>
+            </div>
+
+            <a href="mailto:oficialninare@gmail.com"
+              class="inline-flex items-center gap-2 text-xs font-semibold text-terracotta hover:text-reddish pt-1 transition-colors mt-auto">
+              <span>Enviar e-mail</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+    </section>
+
+    </div>
+
+    <!-- Formulário de Contato "Deixe seu recado"
+          <div class="lg:col-span-7 bg-white rounded-3xl p-8 md:p-10 border border-sage/20 shadow-md">
+            <div class="space-y-2 mb-8">
+              <h3 class="font-serif text-2xl md:text-3xl font-bold text-navy">Deixe seu recado</h3>
+              <p class="text-sm text-navy/70 font-light">
+                Envie sua dúvida ou solicitação. Responderemos com toda a atenção em breve.
+              </p>
+            </div>
+
+             Alerta de Sucesso
+            <div id="contact-alert-success"
+              class="hidden mb-6 p-4 rounded-2xl bg-[#9CA59A]/20 border border-sage text-navy flex items-start gap-3">
+              <svg class="w-5 h-5 text-sage mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <div>
+                <p class="text-sm font-semibold">Mensagem pronta para envio!</p>
+                <p id="contact-success-text" class="text-xs text-navy/80 mt-0.5">Abrindo o WhatsApp da Ninare com os
+                  seus dados...</p>
+              </div>
+            </div>
+
+             Alerta de Erro 
+            <div id="contact-alert-error"
+              class="hidden mb-6 p-4 rounded-2xl bg-red-50 border border-reddish text-navy flex items-start gap-3">
+              <svg class="w-5 h-5 text-reddish mt-0.5 flex-shrink-0" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <div>
+                <p class="text-sm font-semibold text-reddish">Atenção</p>
+                <p id="contact-error-text" class="text-xs text-navy/80 mt-0.5">Verifique os dados informados.</p>
+              </div>
+            </div>
+
+            <form id="contact-form" novalidate class="space-y-5">
+               Nome 
+              <div>
+                <label for="id_name" class="block text-xs font-semibold uppercase tracking-wider text-navy/80 mb-2">
+                  Nome Completo <span class="text-reddish">*</span>
+                </label>
+                <input type="text" id="id_name" name="name" required placeholder="Seu nome completo"
+                  class="w-full px-4 py-3 text-sm bg-creme/50 border border-sage/30 rounded-xl focus:bg-white text-navy transition-all duration-200 outline-none focus:border-terracotta">
+              </div>
+
+               Linha Dupla: WhatsApp & E-mail
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="id_phone" class="block text-xs font-semibold uppercase tracking-wider text-navy/80 mb-2">
+                    WhatsApp / Telefone <span class="text-reddish">*</span>
+                  </label>
+                  <input type="tel" id="id_phone" name="phone" required placeholder="(DDD) 99999-9999"
+                    class="w-full px-4 py-3 text-sm bg-creme/50 border border-sage/30 rounded-xl focus:bg-white text-navy transition-all duration-200 outline-none focus:border-terracotta">
+                </div>
+
+                <div>
+                  <label for="id_email" class="block text-xs font-semibold uppercase tracking-wider text-navy/80 mb-2">
+                    E-mail <span class="text-reddish">*</span>
+                  </label>
+                  <input type="email" id="id_email" name="email" required placeholder="seuemail@exemplo.com"
+                    class="w-full px-4 py-3 text-sm bg-creme/50 border border-sage/30 rounded-xl focus:bg-white text-navy transition-all duration-200 outline-none focus:border-terracotta">
+                </div>
+              </div>
+
+               Assunto
+              <div>
+                <label for="id_subject" class="block text-xs font-semibold uppercase tracking-wider text-navy/80 mb-2">
+                  Assunto <span class="text-reddish">*</span>
+                </label>
+                <input type="text" id="id_subject" name="subject" required placeholder="Qual o motivo do seu contato?"
+                  class="w-full px-4 py-3 text-sm bg-creme/50 border border-sage/30 rounded-xl focus:bg-white text-navy transition-all duration-200 outline-none focus:border-terracotta">
+              </div>
+
+              Mensagem
+              <div>
+                <label for="id_message" class="block text-xs font-semibold uppercase tracking-wider text-navy/80 mb-2">
+                  Mensagem <span class="text-reddish">*</span>
+                </label>
+                <textarea id="id_message" name="message" rows="4" required
+                  placeholder="Descreva brevemente como podemos ajudar..."
+                  class="w-full px-4 py-3 text-sm bg-creme/50 border border-sage/30 rounded-xl focus:bg-white text-navy transition-all duration-200 resize-none outline-none focus:border-terracotta"></textarea>
+              </div>
+
+              Botão de Envio
+              <div class="pt-2">
+                <button type="submit" id="contact-submit-btn"
+                  class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-terracotta hover:bg-reddish text-creme font-semibold text-sm px-8 py-3.5 rounded-full transition-all duration-300 shadow-sm hover:shadow hover:-translate-y-0.5">
+                  <span id="contact-btn-text">Enviar mensagem</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div> -->
+
+    </div>
+
+    </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================================= -->
+  <!-- BOTÃO FLUTUANTE DO WHATSAPP                                       -->
+  <!-- ================================================================= -->
+  <aside aria-label="Atendimento rápido via WhatsApp">
+    <a href="https://wa.me/556194321882?text=Ol%C3%A1%21%20Conheci%20a%20Ninare%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos."
+      target="_blank" rel="noopener noreferrer" aria-label="Falar conosco no WhatsApp"
+      class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-terracotta hover:bg-reddish text-creme rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110 whatsapp-pulse">
+
+      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12.04 2a9.86 9.86 0 0 0-8.45 14.95L2.3 22l5.2-1.36A9.95 9.95 0 1 0 12.04 2Zm0 18.1a8.12 8.12 0 0 1-4.14-1.13l-.3-.18-3.08.81.82-3-.2-.31a8.12 8.12 0 1 1 6.9 3.81Zm4.46-6.08c-.24-.12-1.43-.71-1.65-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.46-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.1.15 1.52.09.46-.07 1.43-.58 1.63-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z" />
+      </svg>
+
+    </a>
+  </aside>
+
+  <!-- ================================================================= -->
+  <!-- FOOTER                                                            -->
+  <!-- ================================================================= -->
+  <footer class="bg-[#0E2B46] text-creme py-16 px-6 md:px-12 border-t border-navy">
+    <div class="max-w-7xl mx-auto space-y-12">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+
+        <!-- Ninare Brand & Breve Descrição -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center gap-2">
+            <span
+              class="w-8 h-8 rounded-full bg-terracotta text-creme font-serif font-bold text-lg flex items-center justify-center">
+              N
+            </span>
+            <span class="font-serif text-2xl font-bold tracking-tight text-creme">
+              Ninare
+            </span>
+          </div>
+          <p class="text-sm text-creme/70 font-light leading-relaxed max-w-sm">
+            Cuidado especializado, assistência e acolhimento com respeito, segurança e dedicação para quem mais importa.
+          </p>
+        </div>
+
+        <!-- Links de Navegação -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="text-xs uppercase font-bold tracking-wider text-peach">Navegação</h4>
+          <ul class="space-y-2 text-sm text-creme/75">
+            <li><a href="#inicio" class="hover:text-peach transition-colors">Início</a></li>
+            <li><a href="#sobre" class="hover:text-peach transition-colors">Sobre a Ninare</a></li>
+            <li><a href="#servicos" class="hover:text-peach transition-colors">Serviços</a></li>
+            <li><a href="#como-funciona" class="hover:text-peach transition-colors">Como funciona</a></li>
+            <li><a href="#faq" class="hover:text-peach transition-colors">FAQ</a></li>
+            <li><a href="#contato" class="hover:text-peach transition-colors">Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- Contato & Redes -->
+        <div class="lg:col-span-4 space-y-3">
+          <h4 class="text-xs uppercase font-bold tracking-wider text-peach">Contato & Redes</h4>
+          <ul class="space-y-2.5 text-sm text-creme/75">
+            <li>
+              <a href="https://wa.me/556194321882?text=Ol%C3%A1%21%20Conheci%20a%20Ninare%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos."
+                target="_blank" rel="noopener noreferrer"
+                class="hover:text-peach transition-colors flex items-center gap-2">
+                <span>WhatsApp: +55 61 9432-1882</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/ninareoficial/" target="_blank" rel="noopener noreferrer"
+                class="hover:text-peach transition-colors flex items-center gap-2">
+                <span>Instagram: @ninareoficial</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:oficialninare@gmail.com"
+                class="hover:text-peach transition-colors flex items-center gap-2">
+                <span>E-mail: oficialninare@gmail.com</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Linha Inferior: Copyright & Links Legais -->
+      <div
+        class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-creme/60">
+        <p>© <span id="current-year"></span> Ninare. Todos os direitos reservados.</p>
+        <div class="flex items-center gap-6">
+          <a href="#contato" class="hover:text-peach transition-colors">Política de Privacidade</a>
+          <a href="#contato" class="hover:text-peach transition-colors">Termos de Uso</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================================================================= -->
+  <!-- JAVASCRIPT EMBUTIDO (NAVBAR, MOBILE MENU, FAQ E CONTATO)           -->
+  <!-- ================================================================= -->
+  <script>
+    // 1. Atualizar ano corrente automaticamente no rodapé
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // 2. Efeito dinâmico da Navbar ao rolar a página
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        header.classList.add('bg-creme/90', 'backdrop-blur-md', 'shadow-sm', 'py-3');
+        header.classList.remove('bg-transparent', 'py-4');
+      } else {
+        header.classList.remove('bg-creme/90', 'backdrop-blur-md', 'shadow-sm', 'py-3');
+        header.classList.add('bg-transparent', 'py-4');
+      }
+    });
+
+    // 3. Controle do Menu Mobile
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isClosed = mobileMenu.classList.contains('hidden');
+        if (isClosed) {
+          mobileMenu.classList.remove('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', 'true');
+          menuIconOpen.classList.add('hidden');
+          menuIconClose.classList.remove('hidden');
+        } else {
+          mobileMenu.classList.add('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          menuIconOpen.classList.remove('hidden');
+          menuIconClose.classList.add('hidden');
+        }
+      });
+
+      // Fechar menu mobile ao clicar em qualquer link
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          menuIconOpen.classList.remove('hidden');
+          menuIconClose.classList.add('hidden');
+        });
+      });
+    }
+
+    // 4. Accordion Interativo do FAQ
+    const faqButtons = document.querySelectorAll('.faq-button');
+    faqButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+        const content = btn.nextElementSibling;
+
+        // Fecha todos os outros itens abertos
+        faqButtons.forEach(otherBtn => {
+          otherBtn.setAttribute('aria-expanded', 'false');
+          if (otherBtn.nextElementSibling) {
+            otherBtn.nextElementSibling.style.maxHeight = null;
+          }
+        });
+
+        // Alterna o estado do item clicado
+        if (!isExpanded) {
+          btn.setAttribute('aria-expanded', 'true');
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    });
+
+    // 5. Envio do Formulário de Contato sem backend (Redirecionamento para WhatsApp)
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById('id_name').value.trim();
+        const phone = document.getElementById('id_phone').value.trim();
+        const email = document.getElementById('id_email').value.trim();
+        const subject = document.getElementById('id_subject').value.trim();
+        const message = document.getElementById('id_message').value.trim();
+
+        const alertSuccess = document.getElementById('contact-alert-success');
+        const alertError = document.getElementById('contact-alert-error');
+        const errorText = document.getElementById('contact-error-text');
+
+        alertSuccess.classList.add('hidden');
+        alertError.classList.add('hidden');
+
+        // Validação simples de campos obrigatórios
+        if (!name || !phone || !email || !subject || !message) {
+          alertError.classList.remove('hidden');
+          errorText.textContent = 'Por favor, preencha todos os campos obrigatórios.';
+          return;
+        }
+
+        // Exibe o alerta de sucesso
+        alertSuccess.classList.remove('hidden');
+
+        // Formata a mensagem com os dados preenchidos
+        const mensagemFormatada =
+          `*Novo Contato via Site Ninare:*\n\n` +
+          `*Nome:* ${name}\n` +
+          `*Telefone:* ${phone}\n` +
+          `*E-mail:* ${email}\n` +
+          `*Assunto:* ${subject}\n` +
+          `*Mensagem:* ${message}`;
+
+        const urlWhatsApp = `https://wa.me/556194321882?text=${encodeURIComponent(mensagemFormatada)}`;
+
+        // Abre o WhatsApp com a mensagem pronta em 1 segundo
+        setTimeout(() => {
+          window.open(urlWhatsApp, '_blank');
+        }, 1000);
+
+        contactForm.reset();
+      });
+    }
+  </script>
+</body>
+
+</html>
